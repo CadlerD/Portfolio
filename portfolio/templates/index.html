@@ -16,7 +16,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#telio">Telio</a></li>
-      <li><a href="#timeline"><span class="hide-xs">Timeline</span></a></li>
+      <li><a href="#structure"><span class="hide-xs">Structure</span></a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -109,6 +109,17 @@
         <p>The prompt is not neutral. Its readability, lexical redundancy, and hedging carry a measurable downstream cost — one that structural design choices, not just hardware, can reduce.</p>
       </div>
     </div>
+
+    <div class="equation">
+      <div class="equation-formula">E<sub>i</sub> = f(C<sub>i</sub>) = f(S<sub>i</sub>, A<sub>i</sub> | H<sub>i</sub>, T<sub>i</sub>)</div>
+      <div class="equation-key">
+        <div><strong>E</strong> Energy consumed</div>
+        <div><strong>C</strong> Computational load</div>
+        <div><strong>S</strong> Structural entropy of the input data</div>
+        <div><strong>A</strong> Developer / agent design choices</div>
+        <div><strong>H, T</strong> Hardware efficiency &amp; task complexity — held constant as controls</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -181,42 +192,50 @@
   </div>
 </section>
 
-<section id="timeline">
+<section id="structure">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">Plan</div>
-      <h2>A 7-phase, 14-week research timeline</h2>
-      <p>The project moves from framework development through instrument-building, data collection, and analysis, toward a McNair-format proposal and presentation.</p>
+      <div class="eyebrow">Structure</div>
+      <h2>How the research comes together</h2>
+      <p>The project moves through three parts: establishing why AI's energy problem is a structural one, building SCEF and Telio to test that claim, and laying out what the data would need to show — along with its limits.</p>
     </div>
 
     <div class="timeline">
       <div class="tl-row">
-        <div><div class="tl-num">01</div><span class="tl-weeks">Wks 1–2</span></div>
-        <div class="tl-body"><div class="t">Literature review &amp; framework development</div><p>Grounding SCEF in existing scholarship on AI performance, energy consumption, and ethics.</p></div>
+        <div><div class="tl-num">01</div><span class="tl-weeks">Part one</span></div>
+        <div class="tl-body">
+          <div class="t">Background</div>
+          <p>From passive tools to autonomous agents, and the overlooked link between data structure and energy cost.</p>
+          <ul class="tl-sub">
+            <li>From Passive Tools to Autonomous Agents</li>
+            <li>The Overlooked Link Between Data Structure and Energy Cost</li>
+          </ul>
+        </div>
       </div>
       <div class="tl-row">
-        <div><div class="tl-num">02</div><span class="tl-weeks">Wks 3–4</span></div>
-        <div class="tl-body"><div class="t">Instrument design</div><p>Building Telio's scoring logic for readability, lexical variety, and hedge density.</p></div>
+        <div><div class="tl-num">02</div><span class="tl-weeks">Part two</span></div>
+        <div class="tl-body">
+          <div class="t">Research Structure</div>
+          <p>The theoretical framework, the hypotheses it generates, and what Telio actually does to test them.</p>
+          <ul class="tl-sub">
+            <li>Theoretical Framework (SCEF)</li>
+            <li>Hypotheses (H1–H4)</li>
+            <li>What Telio Does</li>
+          </ul>
+        </div>
       </div>
       <div class="tl-row">
-        <div><div class="tl-num">03</div><span class="tl-weeks">Wks 5–6</span></div>
-        <div class="tl-body"><div class="t">API integration &amp; token logging</div><p>Connecting Telio to the Claude API and validating real token-usage capture.</p></div>
-      </div>
-      <div class="tl-row">
-        <div><div class="tl-num">04</div><span class="tl-weeks">Wks 7–8</span></div>
-        <div class="tl-body"><div class="t">Prompt corpus &amp; data collection</div><p>Running a structured set of prompts through Telio to generate comparable results.</p></div>
-      </div>
-      <div class="tl-row">
-        <div><div class="tl-num">05</div><span class="tl-weeks">Wks 9–10</span></div>
-        <div class="tl-body"><div class="t">Analysis</div><p>Testing hypotheses on the relationship between structural quality and token/energy cost.</p></div>
-      </div>
-      <div class="tl-row">
-        <div><div class="tl-num">06</div><span class="tl-weeks">Wks 11–12</span></div>
-        <div class="tl-body"><div class="t">Proposal writing</div><p>Drafting the full McNair-format research proposal and references.</p></div>
-      </div>
-      <div class="tl-row">
-        <div><div class="tl-num">07</div><span class="tl-weeks">Wks 13–14</span></div>
-        <div class="tl-body"><div class="t">Presentation prep</div><p>Building the slide deck and speaking script for the McNair symposium.</p></div>
+        <div><div class="tl-num">03</div><span class="tl-weeks">Part three</span></div>
+        <div class="tl-body">
+          <div class="t">Further Steps</div>
+          <p>What's measured, what the data should predict if SCEF holds, and where the framework's limits are.</p>
+          <ul class="tl-sub">
+            <li>Data &amp; Measures</li>
+            <li>Predictions &amp; Significance</li>
+            <li>Limitations &amp; Controls</li>
+            <li>References</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -234,7 +253,7 @@
         <a href="tel:12175120962">(217) 512-0962</a>
         <a href="https://www.linkedin.com/in/cadler-d-ahiti-107260285/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="{{ url_for('static', filename='cadler-dahiti-resume.pdf') }}" target="_blank" rel="noopener">Résumé (PDF)</a>
-        <a href="#">GitHub — Telio (add link)</a>
+        <a href="https://github.com/CadlerD/Portfolio" target="_blank" rel="noopener">GitHub — Telio</a>
       </div>
     </div>
     <div class="foot-note">Cadler Dahiti · McNair Scholars Program · University of Wisconsin–Milwaukee</div>
