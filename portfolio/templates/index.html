@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadler Dahiti — Structural-Computational Efficiency Research</title>
+<meta name="description" content="Portfolio of Cadler Dahiti, McNair Scholar at UW-Milwaukee researching energy-efficient AI through the Structural-Computational Efficiency Framework (SCEF) and the Telio measurement tool.">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="nav-mark">CD<span>·</span>SCEF</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#telio">Telio</a></li>
+      <li><a href="#timeline"><span class="hide-xs">Timeline</span></a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-split">
+    <div class="hero-copy">
+      <div class="eyebrow">McNair Scholars Program — UW–Milwaukee</div>
+      <h1>Cadler Dahiti</h1>
+
+      <p class="hero-lead">Researching whether AI's energy problem starts before the hardware does — in how prompts are structured and how systems are designed to read them.</p>
+
+      <p class="hero-emphasis">SCEF argues that AI energy consumption is a downstream consequence of input data structural quality and developer design choices, not solely a hardware problem. Telio, a Python research instrument, tests that claim empirically — scoring prompt structure, sending it to the Claude API, and converting real token usage into an estimated energy cost.</p>
+
+      <div class="hero-meta">
+        <span><strong>Project</strong> Energy Efficient AI &amp; Ethical Studies</span>
+        <span><strong>Faculty mentor</strong> Dr. Martin</span>
+        <span><strong>Framework</strong> SCEF</span>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="{{ url_for('static', filename='hero.jpg') }}" alt="Cadler Dahiti">
+    </div>
+  </div>
+  <div class="hero-bar"></div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2>An undergraduate research project on where AI's energy cost actually comes from</h2>
+      <p>Most conversations about AI energy consumption point to hardware: bigger chips, bigger datacenters, more efficient cooling. This project asks a different question — how much of that cost is determined earlier, by the structural quality of the inputs a model is asked to process, and by the design choices developers make around them.</p>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <div class="about-fact">
+          <span class="k">Researcher</span>
+          <span class="v">Cadler Dahiti</span>
+        </div>
+        <div class="about-fact">
+          <span class="k">Program</span>
+          <span class="v">McNair Scholars Program, UW–Milwaukee</span>
+        </div>
+        <div class="about-fact">
+          <span class="k">Faculty mentor</span>
+          <span class="v">Dr. Martin</span>
+        </div>
+        <div class="about-fact">
+          <span class="k">Education</span>
+          <span class="v">B.S. Data Science &amp; B.S. Computer Science, UW–Milwaukee (Anticipated May 2028)</span>
+        </div>
+      </div>
+      <div>
+        <div class="about-fact">
+          <span class="k">Project title</span>
+          <span class="v">Energy Efficient AI &amp; Ethical Studies</span>
+        </div>
+        <div class="about-fact">
+          <span class="k">Core contribution</span>
+          <span class="v">Structural–Computational Efficiency Framework (SCEF)</span>
+        </div>
+        <div class="about-fact">
+          <span class="k">Instrument</span>
+          <span class="v">Telio — a prompt-scoring &amp; energy-estimation tool</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Research</div>
+      <h2>The Structural–Computational Efficiency Framework</h2>
+      <p>SCEF argues that AI energy consumption is a downstream consequence of input data structural quality and developer design choices — not solely a hardware problem. Poorly structured, ambiguous, or redundant prompts force models to draw on more processing power to resolve them into a coherent response, which means linguistic inefficiency becomes energy inefficiency.</p>
+    </div>
+
+    <div class="contrast">
+      <div class="against">
+        <h3>The common framing</h3>
+        <p>Energy consumption is treated as a fixed cost of scale — solved by better chips, denser datacenters, and greener power grids. The prompt itself is assumed to be a neutral input.</p>
+      </div>
+      <div class="for">
+        <h3>SCEF's framing</h3>
+        <p>The prompt is not neutral. Its readability, lexical redundancy, and hedging carry a measurable downstream cost — one that structural design choices, not just hardware, can reduce.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="telio">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Instrument</div>
+      <h2>Telio: testing SCEF empirically</h2>
+      <p>To move SCEF from theory to evidence, this project built Telio — a Python research instrument that scores a prompt's linguistic quality, sends it to the Claude API, logs the real token usage that comes back, and converts that into an estimated energy cost using a configurable conversion constant.</p>
+    </div>
+
+    <div class="pipeline">
+      <div class="pipe-node"><div class="n">01</div><div class="t">Prompt in</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node"><div class="n">02</div><div class="t">Telio scores structure</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node"><div class="n">03</div><div class="t">Sent to Claude API</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node"><div class="n">04</div><div class="t">Real token usage logged</div></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node"><div class="n">05</div><div class="t">Energy estimate</div></div>
+    </div>
+
+    <div class="dims">
+      <div class="dim fre">
+        <div class="name">Flesch Reading Ease</div>
+        <p>How readable the prompt is on a standard formula, based on sentence length and syllable count.</p>
+      </div>
+      <div class="dim ttr">
+        <div class="name">Type-Token Ratio</div>
+        <p>Lexical variety — the share of unique words relative to total words, as a proxy for redundancy.</p>
+      </div>
+      <div class="dim hwd">
+        <div class="name">Hedge-Word Density</div>
+        <p>How often a prompt hedges ("maybe," "perhaps," "somewhat") rather than stating things directly.</p>
+      </div>
+    </div>
+
+    <div class="readout">
+      <div class="readout-head">
+        <span class="readout-title">telio — live demo</span>
+        <div class="dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="readout-body">
+        <textarea id="telio-input" spellcheck="false">I think it might perhaps be somewhat useful to maybe consider that the data could possibly be restructured.</textarea>
+        <div class="readout-hint">Type or edit a prompt above — the metrics below recompute as you type.</div>
+
+        <div class="readout-metrics">
+          <div class="metric fre">
+            <div class="metric-label">Flesch RE</div>
+            <div class="metric-value" id="metric-fre">—</div>
+          </div>
+          <div class="metric ttr">
+            <div class="metric-label">Type-Token</div>
+            <div class="metric-value" id="metric-ttr">—</div>
+          </div>
+          <div class="metric hwd">
+            <div class="metric-label">Hedge Density</div>
+            <div class="metric-value" id="metric-hwd">—</div>
+          </div>
+        </div>
+
+        <div class="readout-energy">
+          <span>Relative computational cost</span>
+          <span><strong id="metric-energy">—</strong> <span id="metric-tier" class="mono"></span></span>
+        </div>
+        <div class="readout-disclaimer">Illustrative only — a simplified, in-browser stand-in for Telio, which scores real prompts against the Claude API and logs actual token usage.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Plan</div>
+      <h2>A 7-phase, 14-week research timeline</h2>
+      <p>The project moves from framework development through instrument-building, data collection, and analysis, toward a McNair-format proposal and presentation.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-row">
+        <div><div class="tl-num">01</div><span class="tl-weeks">Wks 1–2</span></div>
+        <div class="tl-body"><div class="t">Literature review &amp; framework development</div><p>Grounding SCEF in existing scholarship on AI performance, energy consumption, and ethics.</p></div>
+      </div>
+      <div class="tl-row">
+        <div><div class="tl-num">02</div><span class="tl-weeks">Wks 3–4</span></div>
+        <div class="tl-body"><div class="t">Instrument design</div><p>Building Telio's scoring logic for readability, lexical variety, and hedge density.</p></div>
+      </div>
+      <div class="tl-row">
+        <div><div class="tl-num">03</div><span class="tl-weeks">Wks 5–6</span></div>
+        <div class="tl-body"><div class="t">API integration &amp; token logging</div><p>Connecting Telio to the Claude API and validating real token-usage capture.</p></div>
+      </div>
+      <div class="tl-row">
+        <div><div class="tl-num">04</div><span class="tl-weeks">Wks 7–8</span></div>
+        <div class="tl-body"><div class="t">Prompt corpus &amp; data collection</div><p>Running a structured set of prompts through Telio to generate comparable results.</p></div>
+      </div>
+      <div class="tl-row">
+        <div><div class="tl-num">05</div><span class="tl-weeks">Wks 9–10</span></div>
+        <div class="tl-body"><div class="t">Analysis</div><p>Testing hypotheses on the relationship between structural quality and token/energy cost.</p></div>
+      </div>
+      <div class="tl-row">
+        <div><div class="tl-num">06</div><span class="tl-weeks">Wks 11–12</span></div>
+        <div class="tl-body"><div class="t">Proposal writing</div><p>Drafting the full McNair-format research proposal and references.</p></div>
+      </div>
+      <div class="tl-row">
+        <div><div class="tl-num">07</div><span class="tl-weeks">Wks 13–14</span></div>
+        <div class="tl-body"><div class="t">Presentation prep</div><p>Building the slide deck and speaking script for the McNair symposium.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Get in touch</h2>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:Cadler12glove@gmail.com">Cadler12glove@gmail.com</a>
+        <a href="tel:12175120962">(217) 512-0962</a>
+        <a href="https://www.linkedin.com/in/cadler-d-ahiti-107260285/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="{{ url_for('static', filename='cadler-dahiti-resume.pdf') }}" target="_blank" rel="noopener">Résumé (PDF)</a>
+        <a href="#">GitHub — Telio (add link)</a>
+      </div>
+    </div>
+    <div class="foot-note">Cadler Dahiti · McNair Scholars Program · University of Wisconsin–Milwaukee</div>
+  </div>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
